@@ -94,11 +94,23 @@
                             <p>A história da Genética é muito antiga. Muitos filósofos, estudiosos e pesquisadores
                                 propuseram modelos de como as características são passadas de pais para filhos. Vamos
                                 conhecer algumas dessas teorias.</p>
-                            <p>Os gregos antigos se interessavam no estudo da reprodução humana e da hereditariedade, e
-                                várias teorias e conceitos foram levantados naquela época, como a teoria da pangênese,
-                                defendida por Hipócrates, que propôs que pequenas partículas de várias partes do corpo
-                                continham as informações hereditárias. Essa teoria perdurou por um bom tempo e foi
-                                aceita até o século XIX.</p>
+                            <p>
+    Os gregos antigos se interessavam no estudo da reprodução humana e da hereditariedade, e
+    várias teorias e conceitos foram levantados naquela época, como a teoria da 
+    <span tabindex="0"
+          class="popover-trigger text-success fw-bold"
+          data-bs-toggle="popover"
+          data-bs-trigger="hover focus"
+          title="Pangênese"
+          data-bs-content="Teoria de Hipócrates que sugeria que partículas de todo o corpo eram transmitidas aos filhos."
+          style="cursor: pointer; text-decoration: underline dotted;">
+        pangênese
+    </span>,
+    defendida por Hipócrates, que propôs que pequenas partículas de várias partes do corpo
+    continham as informações hereditárias. Essa teoria perdurou por um bom tempo e foi
+    aceita até o século XIX.
+</p>
+
                         </div>
                     </div>
                 </div>
@@ -118,7 +130,8 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
-                            <img style="height: 500px;" src="https://taynara9304.github.io/web/aula05/imagens/charles-darwin.png"
+                            <img style="height: 500px;"
+                                src="https://taynara9304.github.io/web/aula05/imagens/charles-darwin.png"
                                 class="card-img-top" alt="Charles Darwin">
                             <div class="card-body">
                                 <h5 class="card-title">Charles Darwin</h5>
@@ -132,7 +145,8 @@
 
                     <div class="col-md-4">
                         <div class="card">
-                            <img style="height: 500px;" src="https://taynara9304.github.io/web/aula05/imagens/gregor-mendel.png"
+                            <img style="height: 500px;"
+                                src="https://taynara9304.github.io/web/aula05/imagens/gregor-mendel.png"
                                 class="card-img-top" alt="Gregor Mendel">
                             <div class="card-body">
                                 <h5 class="card-title">Gregor Mendel</h5>
@@ -146,12 +160,15 @@
 
                     <div class="col-md-4">
                         <div class="card">
-                            <img style="height: 500px;" src="https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/1570533/4238463/apidnjwje__87647.1627188576.jpg?c=2"
+                            <img style="height: 500px;"
+                                src="https://cdn11.bigcommerce.com/s-yzgoj/images/stencil/1280x1280/products/1570533/4238463/apidnjwje__87647.1627188576.jpg?c=2"
                                 class="card-img-top" alt="Thomas Hunt Morgan">
                             <div class="card-body">
                                 <h5 class="card-title">Thomas Hunt Morgan</h5>
-                                <p class="card-text">Biólogo americano que confirmou que os genes estão nos cromossomos.</p>
-                                <button onclick="abrirSobreposicao('morgan')" class="btn btn-success">Saiba mais</button>
+                                <p class="card-text">Biólogo americano que confirmou que os genes estão nos cromossomos.
+                                </p>
+                                <button onclick="abrirSobreposicao('morgan')" class="btn btn-success">Saiba
+                                    mais</button>
                             </div>
                         </div>
                     </div>
@@ -211,7 +228,12 @@
                             src="https://pontobiologia.com.br/wp-content/uploads/2017/12/DNA.jpg" class="d-block w-100"
                             alt="DNA">
                         <div style="background-color: #293624; color: white; padding: 1rem; text-align: center;">
-                            <h5>DNA</h5>
+                            <h5 tabindex="0" class="popover-trigger" data-bs-toggle="popover"
+                                data-bs-trigger="hover focus" title="DNA"
+                                data-bs-content="Ácido desoxirribonucleico, estrutura em dupla hélice formada por nucleotídeos.">
+                                DNA
+                            </h5>
+
                             <p>Molécula de ácido desoxirribonucleico que carrega toda a informação genética de um
                                 organismo.</p>
                         </div>
@@ -273,7 +295,8 @@
         <a href="https://www.facebook.com/"><i data-feather="facebook"></i></a>
         <p>&copy; 2025 Taynara Dias. Todos os direitos reservados.</p>
     </footer>
-    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
@@ -287,6 +310,15 @@
             document.getElementById('overlay-' + id).style.display = 'none';
         }
     </script>
-</body>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+            [...popoverTriggerList].forEach(el => {
+                new bootstrap.Popover(el);
+            });
+        });
+    </script>
+
+</body>
 </html>
